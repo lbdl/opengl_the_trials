@@ -10,18 +10,23 @@
 
 /*
  * NOTE: the order is important here, GL must be before GLFW
- * it seems that glad and glew are interchangeable as in glad
- * loads function definitions etc as does glew and we dont need
- * glad because these driver defs etc are already here as part
- * of Cupertino's implementation of OpenGL
+ * we aren't using GLEW as the functions it wraps are already
+ * part of the OSx implementation of OpenGL. This is not the case
+ * on other platforms I believe where we need to use it to load the
+ * OpenGl functions.
  */
-//#include <glad/glad.h>
-#include <GL/glew.h>
+
+#include <OpenGL/gl.h>
 
 #include <GLFW/glfw3.h>
 
+void framebuffer_size_callback(GLFWwindow* window, int width, int height)
+{
+    glViewport(0, 0, width, height);
+    std::cout << width << std::endl;
+}
+
 int main(int argc, const char * argv[]) {
-    // Initialize GLFW
 
     // Initialize GLFW
     if(!glfwInit())
@@ -33,14 +38,15 @@ int main(int argc, const char * argv[]) {
     // Select OpenGL 4.1
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 #else
     // Select OpenGL 4.3
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 #endif
-    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-    glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
+    glfwWindowHint(GLFW_RESIZABLE, GL_TRUE);
     glfwWindowHint(GLFW_OPENGL_DEBUG_CONTEXT, GL_TRUE);
 
     // get the monitor resolution etc.
@@ -60,13 +66,12 @@ int main(int argc, const char * argv[]) {
         exit(EXIT_FAILURE);
     }
 
-    //we have to use the context or nothong happens to the window in the event loop
+    //we have to use the context or nothing happens to the window in the event loop
     glfwMakeContextCurrent(window);
 
-    // Initialize GLEW
-    glewExperimental = GL_TRUE;
-    glewInit();
+    glViewport(0, 0, 800, 600);
 
+    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
     // Event loop this is where the magic happens
     while(!glfwWindowShouldClose(window))
@@ -80,7 +85,7 @@ int main(int argc, const char * argv[]) {
 
     // Terminate GLFW
     glfwTerminate();
-
-    return 0;
-
+    return EXIT_SUCCESS;
 }
+
+

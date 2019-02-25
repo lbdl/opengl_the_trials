@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="OpenGl_the_first"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/cmake-build-gcc_verbose"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/cmake-build-gcc_verbose/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/cmake-build-gcc_verbose/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/cmake-build-gcc_verbose/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/cmake-build-gcc_verbose/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/cmake-build-gcc_verbose"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/cmake-build-gcc_verbose/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/cmake-build-gcc_verbose/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/cmake-build-gcc_verbose/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/cmake-build-gcc_verbose/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/cmake-build-gcc_verbose"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/cmake-build-gcc_verbose/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/cmake-build-gcc_verbose/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/cmake-build-gcc_verbose/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/cmake-build-gcc_verbose/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="testWindow">
+				<Option output="/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/cmake-build-gcc_verbose/testWindow" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/cmake-build-gcc_verbose"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/gcc/8.2.0/lib/gcc/8/gcc/x86_64-apple-darwin18.2.0/8.2.0/../../../../../../include/c++/8.2.0"/>
+					<Add directory="/usr/local/Cellar/gcc/8.2.0/lib/gcc/8/gcc/x86_64-apple-darwin18.2.0/8.2.0/../../../../../../include/c++/8.2.0/x86_64-apple-darwin18.2.0"/>
+					<Add directory="/usr/local/Cellar/gcc/8.2.0/lib/gcc/8/gcc/x86_64-apple-darwin18.2.0/8.2.0/../../../../../../include/c++/8.2.0/backward"/>
+					<Add directory="/usr/local/Cellar/gcc/8.2.0/lib/gcc/8/gcc/x86_64-apple-darwin18.2.0/8.2.0/include"/>
+					<Add directory="/usr/local/Cellar/gcc/8.2.0/lib/gcc/8/gcc/x86_64-apple-darwin18.2.0/8.2.0/include-fixed"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/cmake-build-gcc_verbose/Makefile&quot;  VERBOSE=1 testWindow"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/cmake-build-gcc_verbose/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/cmake-build-gcc_verbose/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/cmake-build-gcc_verbose/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="testWindow/fast">
+				<Option output="/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/cmake-build-gcc_verbose/testWindow" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/cmake-build-gcc_verbose"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/gcc/8.2.0/lib/gcc/8/gcc/x86_64-apple-darwin18.2.0/8.2.0/../../../../../../include/c++/8.2.0"/>
+					<Add directory="/usr/local/Cellar/gcc/8.2.0/lib/gcc/8/gcc/x86_64-apple-darwin18.2.0/8.2.0/../../../../../../include/c++/8.2.0/x86_64-apple-darwin18.2.0"/>
+					<Add directory="/usr/local/Cellar/gcc/8.2.0/lib/gcc/8/gcc/x86_64-apple-darwin18.2.0/8.2.0/../../../../../../include/c++/8.2.0/backward"/>
+					<Add directory="/usr/local/Cellar/gcc/8.2.0/lib/gcc/8/gcc/x86_64-apple-darwin18.2.0/8.2.0/include"/>
+					<Add directory="/usr/local/Cellar/gcc/8.2.0/lib/gcc/8/gcc/x86_64-apple-darwin18.2.0/8.2.0/include-fixed"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/cmake-build-gcc_verbose/Makefile&quot;  VERBOSE=1 testWindow/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/cmake-build-gcc_verbose/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/cmake-build-gcc_verbose/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/cmake-build-gcc_verbose/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/main.cpp">
+			<Option target="testWindow"/>
+		</Unit>
+		<Unit filename="/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

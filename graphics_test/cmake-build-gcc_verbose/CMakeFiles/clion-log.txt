@@ -1,0 +1,4 @@
+Toolchain 'GCC' is not found Configure
+
+Cannot get compiler information:
+	Cannot run program "/usr/local/Cellar/gcc/8.2.0/bin/g++-8" (in directory "/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/cmake-build-gcc_verbose"): error=2, No such file or directory
