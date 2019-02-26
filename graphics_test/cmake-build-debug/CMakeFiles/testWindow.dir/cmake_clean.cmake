@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/testWindow.dir/main.cpp.o"
+  "CMakeFiles/testWindow.dir/WindowWrangler.cpp.o"
   "testWindow.pdb"
   "testWindow"
 )

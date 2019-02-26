@@ -15,16 +15,25 @@
  * on other platforms I believe where we need to use it to load the
  * OpenGl functions.
  */
-
 #include <OpenGL/gl.h>
 
 #include <GLFW/glfw3.h>
+
+#include "WindowWrangler.h"
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
     glViewport(0, 0, width, height);
     std::cout << width << std::endl;
 }
+
+
+void processInput(GLFWwindow *window)
+{
+    if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+        glfwSetWindowShouldClose(window, true);
+}
+
 
 int main(int argc, const char * argv[]) {
 
@@ -73,9 +82,16 @@ int main(int argc, const char * argv[]) {
 
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
+    float vertices[] = {
+            -0.5f, -0.5f, 0.0f,
+            0.5f, -0.5f, 0.0f,
+            0.0f,  0.5f, 0.0f
+    };
+
     // Event loop this is where the magic happens
     while(!glfwWindowShouldClose(window))
     {
+        processInput(window);
         // Clear the screen to black
         glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
