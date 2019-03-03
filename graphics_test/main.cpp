@@ -22,18 +22,7 @@
 #include "WindowWrangler.h"
 #include "WindowManager.h"
 
-void framebuffer_size_callback(GLFWwindow* window, int width, int height)
-{
-    glViewport(0, 0, width, height);
-    std::cout << width << std::endl;
-}
 
-
-void processInput(GLFWwindow *window)
-{
-    if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
-        glfwSetWindowShouldClose(window, true);
-}
 
 
 int main(int argc, const char * argv[]) {
@@ -42,6 +31,8 @@ int main(int argc, const char * argv[]) {
     auto windowMgr = std::make_unique<WindowWrangler>(WindowWrangler(800, 800));
 
     windowMgr->openWindow();
+
+    windowMgr->setTitle("Mein Schluss");
 
     windowMgr->runWindowLoop();
 

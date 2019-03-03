@@ -32,7 +32,25 @@ public:
         glfwSetWindowSizeCallback(this->window, this->size_callback);
     }
 
-    void setupGLFWindow() {
+    void makeTitledWindow(std::string titleString) {
+        window = glfwCreateWindow(wWidth, wHeight, titleString.c_str(), nullptr, nullptr);
+    }
+
+    void makeWindow() {
+        window = glfwCreateWindow(wHeight, wHeight, "", nullptr, nullptr);
+    }
+
+    void setWindowTitle(std::string titleString) {
+        glfwSetWindowTitle(window, titleString.c_str());
+    }
+
+    void init() {
+        setupHints();
+        makeWindow();
+        setHandlers();
+    }
+
+    void setupHints() {
 #ifdef __APPLE__
         // Select OpenGL 4.1
         glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
@@ -81,11 +99,13 @@ void WindowWrangler::openWindow() {
 
     std::string title = "My Window";
 
-    pimpl_->setupGLFWindow();
+    pimpl_->init();
 
-    pimpl_->window = glfwCreateWindow(800, 600, title.c_str(), nullptr, nullptr);
+//    pimpl_->setWindowTitle(title);
 
-    pimpl_->setHandlers();
+//    pimpl_->makeTitledWindow(title);
+//
+//    pimpl_->setHandlers();
 
 
 
@@ -109,6 +129,10 @@ void WindowWrangler::runWindowLoop() {
         glfwSwapBuffers(pimpl_->window);
         glfwPollEvents();
     }
+}
+
+void WindowWrangler::setTitle(std::string windowTitle) {
+    pimpl_->setWindowTitle(windowTitle);
 }
 
 

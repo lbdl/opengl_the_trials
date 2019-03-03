@@ -13,6 +13,7 @@ public:
     WindowWrangler(int wd, int ht);
     ~WindowWrangler();
     void openWindow();
+    void setTitle(std::string windowTitle);
     void runWindowLoop();
 
     WindowWrangler(WindowWrangler&&);
