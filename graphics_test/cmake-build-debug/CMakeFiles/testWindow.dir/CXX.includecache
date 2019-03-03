@@ -6,19 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/WindowWrangler.h
-GLFW/glfw3.h
--
-
-/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/main.cpp
+/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/WindowWrangler.cpp
 iostream
--
-OpenGL/gl.h
--
-GLFW/glfw3.h
 -
 WindowWrangler.h
 /Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/WindowWrangler.h
+
+/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/WindowWrangler.h
+GLFW/glfw3.h
+-
 
 /usr/local/include/GLFW/glfw3.h
 stddef.h
