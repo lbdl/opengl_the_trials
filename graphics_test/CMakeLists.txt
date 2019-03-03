@@ -1,9 +1,8 @@
 cmake_minimum_required(VERSION 3.13)
 
 if(APPLE)
-    set(CMAKE_XCODE_ATTRIBUTE_CLANG_CXX_LANGUAGE_STANDARD "c++11")
-    set(CMAKE_XCODE_ATTRIBUTE_CLANG_CXX_LIBRARY "libc++")
-    set(CMAKE_XCODE_ATTRIBUTE_GCC_VERSION "com.apple.compilers.llvm.clang.1_0")
+    set(CMAKE_CXX_STANDARD 14)
+    set(CMAKE_CXX_STANDARD_REQUIRED ON)
     set(CMAKE_MACOSX_RPATH 1)
     add_compile_definitions(GL_SILENCE_DEPRECATION)
 else()
@@ -19,7 +18,7 @@ find_package(OpenGL REQUIRED)
 
 include_directories(${OPENGL_INCLUDE_DIR})
 
-add_executable(testWindow main.cpp WindowWrangler.cpp WindowWrangler.h)
+add_executable(testWindow main.cpp WindowWrangler.cpp WindowWrangler.h WindowManager.cpp WindowManager.h)
 
 add_library(LIB_GLFW SHARED IMPORTED GLOBAL)
 

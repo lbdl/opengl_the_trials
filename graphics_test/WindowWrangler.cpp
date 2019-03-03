@@ -57,49 +57,59 @@ public:
         glfwWindowHint(GLFW_REFRESH_RATE, mode->refreshRate);
     }
 
+
+
 private:
 
 };
 
 
-WindowWrangler::WindowWrangler(int wd, int ht) : pimpl(new impl(wd, ht)) {
+WindowWrangler::WindowWrangler(int wd, int ht) : pimpl_(std::make_unique<impl>(impl(wd, ht))) {
     // Initialize GLFW
     if (!glfwInit()) {
         exit(EXIT_FAILURE);
     }
 }
 
+WindowWrangler::~WindowWrangler() = default;
+
+WindowWrangler &WindowWrangler::operator=(WindowWrangler &&) = default;
+
+WindowWrangler::WindowWrangler(WindowWrangler &&) = default;
+
 void WindowWrangler::openWindow() {
 
     std::string title = "My Window";
 
-    pimpl->setupGLFWindow();
+    pimpl_->setupGLFWindow();
 
-    pimpl->window = glfwCreateWindow(800, 600, title.c_str(), nullptr, nullptr);
+    pimpl_->window = glfwCreateWindow(800, 600, title.c_str(), nullptr, nullptr);
 
-    pimpl->setHandlers();
+    pimpl_->setHandlers();
 
 
 
-    if (!pimpl->window) {
+    if (!pimpl_->window) {
         glfwTerminate();
         exit(EXIT_FAILURE);
     }
 
     //we have to use the context or nothing happens to the window in the event loop
-    glfwMakeContextCurrent(pimpl->window);
+    glfwMakeContextCurrent(pimpl_->window);
 
     glViewport(0, 0, 800, 600);
 }
 
 void WindowWrangler::runWindowLoop() {
-    while (!glfwWindowShouldClose(pimpl->window)) {
-        pimpl->processInput(pimpl->window);
+    while (!glfwWindowShouldClose(pimpl_->window)) {
+        pimpl_->processInput(pimpl_->window);
         // Clear the screen to black
         glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
-        glfwSwapBuffers(pimpl->window);
+        glfwSwapBuffers(pimpl_->window);
         glfwPollEvents();
     }
 }
+
+
 

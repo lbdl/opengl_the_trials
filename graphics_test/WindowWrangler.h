@@ -15,9 +15,12 @@ public:
     void openWindow();
     void runWindowLoop();
 
+    WindowWrangler(WindowWrangler&&);
+    WindowWrangler& operator=(WindowWrangler&&);
+
 private:
     class impl;
-    std::unique_ptr<impl> pimpl;
+    std::unique_ptr<impl> pimpl_;
 };
 
 

@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/WindowManager.cpp">
+			<Option target="testWindow"/>
+		</Unit>
+		<Unit filename="/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/WindowManager.h">
+			<Option target="testWindow"/>
+		</Unit>
 		<Unit filename="/Users/timS/DATA/opengl/attempt_the_one/graphics_test/graphics_test/WindowWrangler.cpp">
 			<Option target="testWindow"/>
 		</Unit>

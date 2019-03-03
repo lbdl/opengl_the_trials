@@ -123,6 +123,33 @@ testWindow/fast:
 	$(MAKE) -f CMakeFiles/testWindow.dir/build.make CMakeFiles/testWindow.dir/build
 .PHONY : testWindow/fast
 
+WindowManager.o: WindowManager.cpp.o
+
+.PHONY : WindowManager.o
+
+# target to build an object file
+WindowManager.cpp.o:
+	$(MAKE) -f CMakeFiles/testWindow.dir/build.make CMakeFiles/testWindow.dir/WindowManager.cpp.o
+.PHONY : WindowManager.cpp.o
+
+WindowManager.i: WindowManager.cpp.i
+
+.PHONY : WindowManager.i
+
+# target to preprocess a source file
+WindowManager.cpp.i:
+	$(MAKE) -f CMakeFiles/testWindow.dir/build.make CMakeFiles/testWindow.dir/WindowManager.cpp.i
+.PHONY : WindowManager.cpp.i
+
+WindowManager.s: WindowManager.cpp.s
+
+.PHONY : WindowManager.s
+
+# target to generate assembly for a file
+WindowManager.cpp.s:
+	$(MAKE) -f CMakeFiles/testWindow.dir/build.make CMakeFiles/testWindow.dir/WindowManager.cpp.s
+.PHONY : WindowManager.cpp.s
+
 WindowWrangler.o: WindowWrangler.cpp.o
 
 .PHONY : WindowWrangler.o
@@ -186,6 +213,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... testWindow"
+	@echo "... WindowManager.o"
+	@echo "... WindowManager.i"
+	@echo "... WindowManager.s"
 	@echo "... WindowWrangler.o"
 	@echo "... WindowWrangler.i"
 	@echo "... WindowWrangler.s"

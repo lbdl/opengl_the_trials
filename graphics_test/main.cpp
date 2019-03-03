@@ -20,6 +20,7 @@
 #include <GLFW/glfw3.h>
 
 #include "WindowWrangler.h"
+#include "WindowManager.h"
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
@@ -37,77 +38,18 @@ void processInput(GLFWwindow *window)
 
 int main(int argc, const char * argv[]) {
 
-    // Initialize GLFW
-//    if(!glfwInit())
-//    {
-//        exit(EXIT_FAILURE);
-//    }
-//
-//#ifdef __APPLE__
-//    // Select OpenGL 4.1
-//    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
-//    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
-//    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-//#else
-//    // Select OpenGL 4.3
-//    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
-//    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-//#endif
-//
-//    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-//    glfwWindowHint(GLFW_RESIZABLE, GL_TRUE);
-//    glfwWindowHint(GLFW_OPENGL_DEBUG_CONTEXT, GL_TRUE);
-//
-//    // get the monitor resolution etc.
-//    std::string title = "My Window -- ";
-//    GLFWmonitor* monitor = glfwGetPrimaryMonitor();
-//    const GLFWvidmode* mode = glfwGetVideoMode(monitor);
-//    glfwWindowHint(GLFW_RED_BITS, mode->redBits);
-//    glfwWindowHint(GLFW_GREEN_BITS, mode->greenBits);
-//    glfwWindowHint(GLFW_BLUE_BITS, mode->blueBits);
-//    glfwWindowHint(GLFW_REFRESH_RATE, mode->refreshRate);
-//
-//    GLFWwindow* window = glfwCreateWindow(800, 600, title.c_str(), nullptr, nullptr);
-//
-//    if(!window)
-//    {
-//        glfwTerminate();
-//        exit(EXIT_FAILURE);
-//    }
-//
-//    //we have to use the context or nothing happens to the window in the event loop
-//    glfwMakeContextCurrent(window);
-//
-//    glViewport(0, 0, 800, 600);
-//
-//    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
-//
-//    float vertices[] = {
-//            -0.5f, -0.5f, 0.0f,
-//            0.5f, -0.5f, 0.0f,
-//            0.0f,  0.5f, 0.0f
-//    };
-//
-//    // Event loop this is where the magic happens
-//    while(!glfwWindowShouldClose(window))
-//    {
-//        processInput(window);
-//        // Clear the screen to black
-//        glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-//        glClear(GL_COLOR_BUFFER_BIT);
-//        glfwSwapBuffers(window);
-//        glfwPollEvents();
-//    }
 
+    auto windowMgr = std::make_unique<WindowWrangler>(WindowWrangler(800, 800));
 
-    WindowWrangler *wrangler = new WindowWrangler(800,800);
+    windowMgr->openWindow();
 
-    wrangler->openWindow();
-    wrangler->runWindowLoop();
+    windowMgr->runWindowLoop();
 
 
     // Terminate GLFW
+    // we hit this when the windowManager returns back to main
     glfwTerminate();
+
     return EXIT_SUCCESS;
 }
 
